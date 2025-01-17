@@ -2,7 +2,11 @@
 
 The app folllows MVC rules
 
-"""
+## Diagramme UML
+
+Voici le diagramme UML de votre projet :
+
+```mermaid
 classDiagram
 class Agent {
   -id: int
@@ -37,9 +41,10 @@ class Participant {
   +signIn()
   +signInEvent()
 }
+
 class Statistiques {
-    +countParticipants()
-    +countParticipantsByAge()
+  +countParticipants()
+  +countParticipantsByAge()
 }
 
 Agent "1" --> "*" Event : create
@@ -47,7 +52,7 @@ Agent "1" --> "*" Event : modify
 Agent "1" --> "*" Event : delete
 Agent "1" --> "*" Participant : delete
 Participant "1" --> "*" Event : signIn
-"""
+
 
 
 
