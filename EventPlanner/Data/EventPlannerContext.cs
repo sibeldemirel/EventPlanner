@@ -15,5 +15,7 @@ namespace EventPlanner.Data
         }
 
         public DbSet<EventPlanner.Models.Participant> Participant { get; set; } = default!;
+        public DbSet<EventPlanner.Models.Event> Event { get; set; } = default!;
+        public DbSet<EventPlanner.Models.Agent> Agent { get; set; } = default!;
     }
 }
