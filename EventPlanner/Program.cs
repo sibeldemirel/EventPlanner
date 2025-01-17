@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using EventPlanner.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<EventPlannerContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("EventPlannerContext") ?? throw new InvalidOperationException("Connection string 'EventPlannerContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
